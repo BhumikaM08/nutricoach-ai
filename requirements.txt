@@ -1,0 +1,33 @@
+# PDF Processing
+pdfplumber==0.10.3
+PyPDF2==3.0.1
+
+# AI/LLM (compatible versions)
+openai==1.10.0
+langchain==0.1.0
+langchain-openai==0.0.5
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.2
+pyyaml==6.0.1
+pydantic==2.5.3
+
+# Web/API
+fastapi==0.108.0
+uvicorn==0.25.0
+python-multipart==0.0.6
+streamlit==1.29.0
+
+# Utilities
+python-dotenv==1.0.0
+requests==2.31.0
+
+# Testing/Dev
+pytest==7.4.3
+black==23.12.1
+ipython==8.19.0
+jupyter==1.0.0
+
+google-generativeai==0.3.2
+langchain-google-genai==0.0.5
