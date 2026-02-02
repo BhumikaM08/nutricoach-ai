@@ -234,21 +234,19 @@ class PDFExtractor:
         - Remove leading 'Summary of Results Trait Genes Result'
         - Remove leading 'Typical', 'High risk', etc. from trait
         - Keep only first 2–4 words for trait when it's very long
+        - For result, keep only labels like 'High risk', 'Typical', 'Enhanced', etc.
         """
         if trait:
             t = trait.strip()
 
-            # Drop the common prefix from the header line
             header_prefix = "Summary of Results Trait Genes Result"
             if t.startswith(header_prefix):
                 t = t[len(header_prefix):].strip()
 
-            # Sometimes trait starts with 'Typical' or 'High risk'
             for noise in ["Typical ", "High risk ", "Enhanced ", "Moderate ", "Slightly Enhanced "]:
                 if t.startswith(noise):
                     t = t[len(noise):].strip()
 
-            # If trait is still very long (>= 6 words), keep first 4 words only
             words = t.split()
             if len(words) >= 6:
                 t = " ".join(words[:4])
@@ -257,10 +255,20 @@ class PDFExtractor:
 
         if result:
             r = result.strip()
-            # Keep only the first 2–3 words, e.g. "High risk", "Slightly Enhanced"
-            words = r.split()
-            if len(words) > 3:
-                r = " ".join(words[:3])
+
+            # Normalize to a small, known set of labels
+            r_lower = r.lower()
+            if "high risk" in r_lower:
+                r = "High risk"
+            elif "typical" in r_lower:
+                r = "Typical"
+            elif "slightly enhanced" in r_lower:
+                r = "Slightly Enhanced"
+            elif "enhanced" in r_lower:
+                r = "Enhanced"
+            elif "moderate" in r_lower:
+                r = "Moderate"
+
             result = r if r else None
 
         return {"trait": trait, "result": result}

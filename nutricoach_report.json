@@ -8,14 +8,14 @@
       "page": 3,
       "context": "Summary of Results Trait Genes Result Vitamin And Mineral Metabolism Folate Requirement MTHFR \u2b24 Typical Vitamin A Requirement BCMO1 \u2b24 High risk Vitamin B12 Requirement FUT2 \u2b24 High risk Vitamin C Requirement SLC21A \u2b24 Typical Vitamin D Requirement CYP2R1, GC \u2b24 Typical Vitamin E Requirement Intergenic (APOA5) \u2b24 High risk Choline Requirement MTHFD1 \u2b24 Typical Magnesium Requirement TR",
       "trait": "Vitamin A Requirement",
-      "result": "High risk Vitamin"
+      "result": "High risk"
     },
     {
       "name": "MCM6",
       "page": 3,
       "context": " Requirement TRPM6 \u2b24 High risk Zinc Requirement SLC30A3 \u2b24 High risk Calcium Requirement GC \u2b24 Typical Low Iron Status TMPRSS6, TFR2, TF \u2b24 Typical Iron Overload SLC17A1, HFE \u2b24 Typical Food Reactions, Intolerances, And Sensitivities Lactose Intolerance MCM6 \u2b24 High risk Salt Sensitivity ACE \u2b24 Typical Caffeine Metabolism CYP1A2 \u2b24 High risk Optimizing Weight Loss And Long Term Weight Management Adiponectin Levels ADIPOQ \u2b24 Typical Weightloss Response To FTO, ADRB2 \u2b24 Slightly Enhanced Physical Activity Ener",
       "trait": "And Sensitivities Lactose Intolerance",
-      "result": "High risk Salt"
+      "result": "High risk"
     },
     {
       "name": "FTO",
@@ -36,21 +36,21 @@
       "page": 5,
       "context": " Risks Caffeine Intake - Anxiety And ADORA2A \u2b24 High risk Sleep Disturbance Risk Optimizing Exercise Performance, Fitness, And Managing Injury Risk Motivation To Exercise BDNF \u2b24 Typical Exercise Behavior CYP19A1, LEPR \u2b24 Enhanced Response To Power And ACTN3 \u2b24 Enhanced Strength Training Risk For Muscle Damage ACTN3 \u2b24 Typical Response To Endurance PGC1A, NRF2, NFIA_AS2, \u2b24 Enhanced Training ADRB3, GSTP1 Pain Intolerance COMT \u2b24 Enhanced Risk For ACL (Achilles Tendon) COL5A1 \u2b24 Typical Injury Risk For Rotato",
       "trait": "Response To Power And",
-      "result": "Enhanced Strength Training"
+      "result": "Enhanced"
     },
     {
       "name": "CYP1A2",
       "page": 3,
       "context": "Calcium Requirement GC \u2b24 Typical Low Iron Status TMPRSS6, TFR2, TF \u2b24 Typical Iron Overload SLC17A1, HFE \u2b24 Typical Food Reactions, Intolerances, And Sensitivities Lactose Intolerance MCM6 \u2b24 High risk Salt Sensitivity ACE \u2b24 Typical Caffeine Metabolism CYP1A2 \u2b24 High risk Optimizing Weight Loss And Long Term Weight Management Adiponectin Levels ADIPOQ \u2b24 Typical Weightloss Response To FTO, ADRB2 \u2b24 Slightly Enhanced Physical Activity Energy Balance (RMR) UCP1 \u2b24 Typical Protein Intake And Weightloss FTO \u2b24 Ty",
       "trait": "Caffeine Metabolism",
-      "result": "High risk Optimizing"
+      "result": "High risk"
     },
     {
       "name": "IL6",
       "page": 5,
       "context": "d Training ADRB3, GSTP1 Pain Intolerance COMT \u2b24 Enhanced Risk For ACL (Achilles Tendon) COL5A1 \u2b24 Typical Injury Risk For Rotator Cuff Injury MMP1 \u2b24 High risk Inflammation Risk, Antioxidant Defense, And Long-Term Wellness Interleukin 6 - Inflammation IL6 \u2b24 Typical Risk Risk For Oxidative Stress And SOD2 \u2b24 High risk Damage - Superoxide Dismutase 2 (SOD2) Nitric Oxide - Role In NOS3 \u2b24 High risk Vasodilation TRID-XXXX-YYYYY, v1 Page 4 of 124",
       "trait": "Inflammation",
-      "result": "Typical Risk Risk"
+      "result": "Typical"
     },
     {
       "name": "ALDH2",
@@ -64,14 +64,14 @@
       "page": 4,
       "context": "Summary of Results Trait Genes Result Total Fats Intake And TCF7L2 \u2b24 Typical Weightloss Saturated Fats Intake And APOA2 \u2b24 High risk Obesity Risk Monounsaturated Fats Intake PPARy2 \u2b24 Typical And Weightloss Starch Intake And Weight-Gain AMY1 \u2b24 Typical Risk Weight Regain Risk - ADIPOQ \u2b24 Typical Maintenance Of Long-Ter",
       "trait": "Total Fats Intake And",
-      "result": "Typical Weightloss Saturated"
+      "result": "Typical"
     },
     {
       "name": "BDNF",
       "page": 5,
       "context": "Cholesterol Levels Caffeine Intake And CYP1A2 \u2b24 High risk Cardiometabolic Health Risks Caffeine Intake - Anxiety And ADORA2A \u2b24 High risk Sleep Disturbance Risk Optimizing Exercise Performance, Fitness, And Managing Injury Risk Motivation To Exercise BDNF \u2b24 Typical Exercise Behavior CYP19A1, LEPR \u2b24 Enhanced Response To Power And ACTN3 \u2b24 Enhanced Strength Training Risk For Muscle Damage ACTN3 \u2b24 Typical Response To Endurance PGC1A, NRF2, NFIA_AS2, \u2b24 Enhanced Training ADRB3, GSTP1 Pain Intolerance COMT ",
       "trait": "And Managing Injury Risk",
-      "result": "Typical Exercise Behavior"
+      "result": "Typical"
     }
   ]
 }
