@@ -1,3 +1,4 @@
+import json
 import pdfplumber
 import re
 from pathlib import Path
@@ -298,17 +299,34 @@ class PDFExtractor:
             "found_genes_count": len(genes),
             "genes": genes,
         }
+    def save_json(self, output_path: str = "nutricoach_report.json") -> str:
+        """
+        Save extracted genes as JSON.
+        Returns the absolute path of the saved file.
+        """
+        data = self.to_dict()
+        output_file = Path(output_path)
+        output_file.write_text(json.dumps(data, indent=2), encoding="utf-8")
+        print(f"Saved {len(data['genes'])} genes to {output_file.absolute()}")
+        return str(output_file.absolute())
 
 
 def main():
     pdf_path = "data/sample_reports/sample_report.pdf"
     extractor = PDFExtractor(pdf_path)
+
+    # Build internal state
     extractor.load_pdf_text()
     extractor.parse_summary_tables()
-    result = extractor.to_dict()
 
+    # Save to JSON
+    json_path = extractor.save_json()
+
+    # Print console summary (for debugging)
+    result = extractor.to_dict()
     print("\n=== PDF SUMMARY + TABLE PARSE ===")
     print(f"PDF: {result['pdf_path']}")
+    print(f"JSON: {json_path}")
     print(f"Pages: {result['total_pages']}")
     print(f"Priority genes found: {result['found_genes_count']}\n")
 
