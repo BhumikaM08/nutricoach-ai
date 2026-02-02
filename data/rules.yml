@@ -1,0 +1,232 @@
+# data/rules.yml - initial gene -> recommendation mappings for NutriCoach AI
+# Each gene entry maps known result levels to actions, foods, supplements,
+# fitness notes, explanation, and priority (1-10).
+# NOTE: supplement dosages are illustrative ranges; always include "consult_professional".
+
+BCMO1:
+  category: "Vitamin A Requirement"
+  mappings:
+    High Risk:
+      action: "increase_preformed_vitamin_A"
+      foods: ["liver (small portions)", "egg yolk", "full-fat dairy", "fortified milk/cereals"]
+      supplements:
+        - name: "Vitamin A (retinol)"
+          note: "avoid >3000 mcg/day; consult_professional"
+      fitness_notes: null
+      lifestyle: []
+      explanation: "Reduced beta-carotene to retinol conversion; prefer preformed vitamin A or fortified foods."
+      priority: 9
+    Typical:
+      action: "standard_intake"
+      foods: ["carrots", "sweet potato", "leafy greens", "dairy"]
+      supplements: []
+      fitness_notes: null
+      lifestyle: []
+      explanation: "Normal beta-carotene conversion — follow a balanced diet."
+      priority: 3
+
+MCM6:
+  category: "Lactose Intolerance"
+  mappings:
+    High Risk:
+      action: "avoid_or_limit_lactose"
+      foods: ["lactose-free milk", "yogurt (fermented may be tolerated)", "hard cheeses", "plant milks"]
+      supplements:
+        - name: "Lactase enzyme (OTC)"
+          note: "use as needed with lactose-containing foods"
+      fitness_notes: null
+      lifestyle: []
+      explanation: "Reduced lactase persistence; choose lactose-free or fermented dairy to avoid symptoms."
+      priority: 8
+    Typical:
+      action: "normal_dairy_intake"
+      foods: ["milk", "yogurt", "cheese"]
+      supplements: []
+      fitness_notes: null
+      lifestyle: []
+      explanation: "Lactase production likely sustained into adulthood."
+      priority: 2
+
+FTO:
+  category: "Satiety / Weight Loss"
+  mappings:
+    Typical:
+      action: "standard_energy_balance"
+      foods: ["high-protein meals", "fiber-rich whole grains", "vegetables and fruit"]
+      supplements: []
+      fitness_notes: "encourage regular activity and portion control"
+      lifestyle: []
+      explanation: "No increased genetic appetite risk — standard satiety strategies recommended."
+      priority: 4
+    Risk:
+      action: "enhanced_satiety_strategy"
+      foods: ["higher protein breakfast", "fiber-rich snacks", "timed meals"]
+      supplements: []
+      fitness_notes: "structured exercise to modulate appetite"
+      lifestyle: []
+      explanation: "FTO risk alleles linked with higher appetite; higher-protein meals and structure help."
+      priority: 8
+
+ADRB2:
+  category: "Exercise-mediated Fat Mobilization"
+  mappings:
+    Enhanced:
+      action: "leverage_exercise_for_fat_loss"
+      foods: ["lean protein", "low-glycemic carbs pre-workout"]
+      supplements:
+        - name: "Caffeine"
+          note: "use cautiously; moderate doses pre-workout; check CYP1A2 status"
+      fitness_notes: "include moderate aerobic plus resistance; HIIT works well"
+      lifestyle: []
+      explanation: "ADRB2 variants can increase fat mobilization during exercise — combine cardio and resistance."
+      priority: 7
+    Typical:
+      action: "standard_exercise_prescription"
+      foods: ["balanced macronutrients"]
+      supplements: []
+      fitness_notes: "mix strength and cardio"
+      lifestyle: []
+      explanation: "Normal ADRB2 response."
+      priority: 4
+
+ACTN3:
+  category: "Power vs Endurance Response"
+  mappings:
+    Enhanced:
+      action: "favor_power_training"
+      foods: ["protein-rich meals for recovery", "creatine-rich foods optional"]
+      supplements:
+        - name: "Creatine monohydrate"
+          note: "3–5 g/day commonly used; consult_professional"
+      fitness_notes: "focus on resistance, sprinting, plyometrics; about 3 strength sessions per week"
+      lifestyle: []
+      explanation: "ACTN3 R allele supports fast-twitch / speed / power performance — use power training to exploit advantage."
+      priority: 8
+    Typical:
+      action: "balanced_strength_endurance"
+      foods: ["mixed carbs and protein"]
+      supplements: []
+      fitness_notes: "mix of endurance and strength"
+      lifestyle: []
+      explanation: "No pronounced advantage or disadvantage for sprint–power."
+      priority: 4
+
+TCF7L2:
+  category: "Response to Whole Grain / Glycemic Control"
+  mappings:
+    Typical:
+      action: "standard_carb_distribution"
+      foods: ["whole grains", "legumes", "vegetables"]
+      supplements: []
+      fitness_notes: "regular exercise for insulin sensitivity"
+      lifestyle: []
+      explanation: "Normal TCF7L2 profile — whole grains support glycemic control."
+      priority: 4
+    High Risk:
+      action: "lower_gi_and_monitor_glucose"
+      foods: ["low-GI carbs", "extra fiber", "lean proteins"]
+      supplements: []
+      fitness_notes: "regular moderate exercise"
+      lifestyle: []
+      explanation: "Risk alleles may impair insulin secretion; lower-GI carbs and exercise help."
+      priority: 9
+
+APOA2:
+  category: "Saturated Fats Intake & Obesity Risk"
+  mappings:
+    High Risk:
+      action: "limit_saturated_fats"
+      foods: ["olive oil", "nuts", "oily fish", "avoid high saturated-fat processed items"]
+      supplements: []
+      fitness_notes: "cardio plus resistance training to support weight management"
+      lifestyle: []
+      explanation: "APOA2 variants linked to sensitivity to saturated fat; reduce intake to lower obesity risk."
+      priority: 8
+    Typical:
+      action: "standard_fat_guidance"
+      foods: ["balanced dietary fats"]
+      supplements: []
+      fitness_notes: null
+      lifestyle: []
+      explanation: "No special sensitivity to saturated fats."
+      priority: 3
+
+APOA5:
+  category: "Total Cholesterol / Triglycerides"
+  mappings:
+    High Risk:
+      action: "reduce_simple_sugars_and_refined_carbs_and_increase_omega3"
+      foods: ["oily fish (salmon, mackerel)", "nuts and seeds", "whole grains"]
+      supplements:
+        - name: "Omega-3 (EPA/DHA)"
+          note: "500–1000 mg/day typical for general heart health; consult_professional"
+      fitness_notes: "regular aerobic exercise"
+      lifestyle: []
+      explanation: "APOA5 variants can elevate triglycerides — omega-3 and reduced refined carbs help."
+      priority: 8
+    Typical:
+      action: "standard_lipid_diet"
+      foods: ["balanced fats"]
+      supplements: []
+      fitness_notes: null
+      lifestyle: []
+      priority: 3
+
+ABCG8:
+  category: "LDL Cholesterol Levels"
+  mappings:
+    High Risk:
+      action: "lower_dietary_cholesterol_and_saturated_fats"
+      foods: ["increase soluble fiber (oats, legumes)", "plant sterols", "vegetables"]
+      supplements:
+        - name: "Plant sterols"
+          note: "around 2 g/day has LDL-lowering effects; consult_professional"
+      fitness_notes: "aerobic activity"
+      lifestyle: []
+      explanation: "ABCG8 variants linked to higher LDL — dietary modifications and fiber can help."
+      priority: 8
+    Typical:
+      action: "standard_lipid_guidance"
+      foods: []
+      supplements: []
+      fitness_notes: null
+      lifestyle: []
+      priority: 3
+
+ANGPTL3:
+  category: "Triglycerides"
+  mappings:
+    High Risk:
+      action: "monitor_triglycerides_and_reduce_refined_carbs"
+      foods: ["oily fish", "high-fiber foods", "non-starchy vegetables"]
+      supplements:
+        - name: "Omega-3"
+          note: "see APOA5 omega-3 guidance; consult_professional"
+      fitness_notes: "regular aerobic exercise"
+      lifestyle: []
+      explanation: "ANGPTL3 variants can increase triglycerides — reduce refined carbs and add omega-3."
+      priority: 8
+
+ADCY5:
+  category: "Fasting Glucose"
+  mappings:
+    High Risk:
+      action: "monitor_glucose_and_manage_carbohydrates"
+      foods: ["low-GI carbs", "high-fiber foods", "lean proteins"]
+      supplements: []
+      fitness_notes: "regular exercise to improve insulin sensitivity"
+      lifestyle: []
+      explanation: "ADCY5 variants may raise fasting glucose; carbohydrate quality and exercise matter."
+      priority: 9
+
+IRS1:
+  category: "Insulin Levels"
+  mappings:
+    Typical:
+      action: "standard_metabolic_care"
+      foods: ["balanced macronutrients", "fiber-rich foods"]
+      supplements: []
+      fitness_notes: "maintain regular physical activity"
+      lifestyle: []
+      explanation: "IRS1 typical status — follow normal guidelines to support insulin function."
+      priority: 4
