@@ -80,21 +80,28 @@ class RuleEngine:
         if "risk" == r:
             return "Risk"
         return None  # unknown / not mapped
-
-    def apply_rules(self, genes: List[GeneData]) -> List[GeneRuleAdvice]:
+    
+    def apply_rules(self, genes: List[GeneData | dict]) -> List[GeneRuleAdvice]:
         """
-        For each GeneData, look up matching rule in rules.yml (if any)
+        For each GeneData OR dict, look up matching rule in rules.yml (if any)
         and return a list of GeneRuleAdvice objects.
         """
         advice_list: List[GeneRuleAdvice] = []
 
         for g in genes:
-            gene_name = g.name.upper()
+            # Handle both GeneData objects and dicts
+            if isinstance(g, dict):
+                gene_name = g["gene"].upper()
+                risk_level = g["risk"]
+            else:
+                gene_name = g.name.upper()
+                risk_level = g.result
+
             rule_entry = self.rules_data.get(gene_name)
             if not rule_entry:
                 continue  # no rules for this gene yet
 
-            risk_key = self._normalize_risk(g.result)
+            risk_key = self._normalize_risk(risk_level)
             if not risk_key:
                 continue  # cannot match YAML mapping
 
