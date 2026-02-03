@@ -3,7 +3,7 @@ from typing import Any, Dict, List, Optional
 
 import yaml
 
-from src.extraction.pdf_extractor import GeneData
+from extraction.pdf_extractor import GeneData
 
 
 class GeneRuleAdvice:
