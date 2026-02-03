@@ -1,0 +1,19 @@
+# data/meals.yml - Gene → Food mappings
+BCMO1:
+  vitamin_a:  # High risk → preformed Vit A foods
+    breakfast: ["2 boiled eggs (12g protein, 140mcg Vit A)", "Fortified cereal (200ml almond milk)"]
+    lunch: ["Chicken liver stir-fry (100g, 6500mcg Vit A)", "Spinach salad"]
+    dinner: ["Salmon (150g, Omega3 + Vit D)", "Sweet potato"]
+  
+MCM6:
+  lactose_intolerant:  # No dairy
+    breakfast: ["Oatmeal + almond milk", "Banana"]
+    snacks: ["Almonds (20g)", "Apple"]
+  
+ACTN3:
+  power_training:  # Muscle repair
+    post_workout: ["Whey protein shake (25g)", "Greek yogurt (lactose-free)"]
+  
+TCF7L2:
+  carb_metabolism:  # Low GI
+    all_meals: ["Quinoa > rice", "Berries > banana"]
