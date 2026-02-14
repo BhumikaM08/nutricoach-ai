@@ -4,6 +4,7 @@ from typing import Any, Dict, List, Optional
 import yaml
 
 from extraction.pdf_extractor import GeneData
+from .models import GeneRuleAdvice
 
 
 class GeneRuleAdvice:

@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import List
 
-from rule_engine import GeneRuleAdvice
-from models import (
+from .rule_engine import GeneRuleAdvice
+from .models import (
     NutritionItem,
     FitnessItem,
     SupplementItem,
