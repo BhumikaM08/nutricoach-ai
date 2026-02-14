@@ -262,13 +262,14 @@ def main():
             
             # Load environment variables
             from dotenv import load_dotenv
+            import streamlit as st
             import os
             load_dotenv()  # Loads .env file
             
-            api_key = os.getenv("GEMINI_API_KEY")
+            api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GOOGLE_GENAI_API_KEY")
             
             if not api_key:
-                st.warning("⚠️ Gemini API key not configured")
+                st.warning("⚠️ Gemini API key not configured. Add to .env or secrets.toml")
                 st.markdown("""
                 *To enable AI reports:*
                 1. Create .env file in project root (nutricoach-ai/)
@@ -299,8 +300,9 @@ def main():
 
             # Display report if exists
             if 'ai_report' in st.session_state:
-                st.markdown("### 📝 Your Personalized Report")
-                st.markdown(st.session_state.ai_report)
+                st.markdown("### **Your Personalized Nutrition Plan**")
+                with st.expander("📋 View Full Plan"):
+                 st.markdown(report)
             else:
                 st.info("👆 Click 'Generate AI Explanation' for human-readable insights from Gemini")
 
